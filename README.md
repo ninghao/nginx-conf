@@ -56,8 +56,7 @@ echo "0 0,12 * * * root python -c 'import random; import time; time.sleep(random
 
 #### Fix error
 
-If you encounter this error: "ImportError: No module named 'request-packages.urllib3', execute following commands:
-"
+If you encounter this error: "ImportError: No module named 'request-packages.urllib3'", execute following commands:
 
 ```
 pip uninstall urllib3
