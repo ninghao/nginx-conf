@@ -27,3 +27,29 @@ To install nginx, run the following command:
 ```
 yum install nginx
 ```
+
+## SSL
+
+### CentOS
+
+#### Install Certbot
+
+```
+yum install certbot python2-certbot-nginx
+```
+
+#### Install certificates
+
+```
+certbot --nginx
+
+or
+
+certbot certonly --nginx
+```
+
+#### Auto renewal
+
+```
+echo "0 0,12 * * * root python -c 'import random; import time; time.sleep(random.random() * 3600)' && certbot renew" | sudo tee -a /etc/crontab > /dev/null
+```
