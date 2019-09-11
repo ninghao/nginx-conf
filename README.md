@@ -53,3 +53,18 @@ certbot certonly --nginx
 ```
 echo "0 0,12 * * * root python -c 'import random; import time; time.sleep(random.random() * 3600)' && certbot renew" | sudo tee -a /etc/crontab > /dev/null
 ```
+
+#### Fix error
+
+If you encounter this error: "ImportError: No module named 'request-packages.urllib3', execute following commands:
+"
+
+```
+pip uninstall urllib3
+yum install python-urllib3 -y
+pip uninstall requests
+yum remove python-requests
+yum install python-requests -y
+yum install certbot -y
+yum install python2-certbot-nginx -y
+```
