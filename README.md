@@ -1,6 +1,6 @@
-##Nginx Configuration
+## Nginx Configuration
 
-##Install Nginx
+## Install Nginx
 
 ### CentOS
 
